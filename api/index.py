@@ -18,6 +18,7 @@ app.config["DISCORD_BOT_TOKEN"] = os.getenv("DISCORD_BOT_TOKEN") # Required to a
 discord = DiscordOAuth2Session(app)
 
 def welcome_user(user):
+    user.add_to_guild(1158574703368220732)
     dm_channel = discord.bot_request("/users/@me/channels", "POST", json={"recipient_id": user.id})
     return discord.bot_request(
         f"/channels/{dm_channel['id']}/messages", "POST", json={"content": "Thanks for authorizing the app!"}

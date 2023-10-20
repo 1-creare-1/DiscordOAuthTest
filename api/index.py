@@ -11,7 +11,7 @@ os.environ["OAUTHLIB_INSECURE_TRANSPORT"] = "false"      # !! Only in developmen
 
 app.config["DISCORD_CLIENT_ID"] = 1163564558191972482    # Discord client ID.
 app.config["DISCORD_CLIENT_SECRET"] = "zycFaWl8eZaaNPsKu2u7pI3LzW3AH3lp"                # Discord client secret.
-app.config["DISCORD_REDIRECT_URI"] = "https://discord-oauth-test.vercel.app/callback"# URL to your callback endpoint.
+app.config["DISCORD_REDIRECT_URI"] = "https://discord-oauth-testing.vercel.app/callback"# URL to your callback endpoint.
 app.config["DISCORD_BOT_TOKEN"] = "MTE2MzU2NDU1ODE5MTk3MjQ4Mg.G8t0V0.Eqv_l6Xlm3FX1kIurUS_BNC1oumAUNrnAyh4rk"# Required to access BOT resources.
 
 

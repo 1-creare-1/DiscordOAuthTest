@@ -46,8 +46,12 @@ def redirect_unauthorized(e):
 @app.route("/me/")
 @requires_authorization
 def me():
-    welcome_user()
+
     user = discord.fetch_user()
+    try:
+        welcome_user(user)
+    except Exception as ex:
+        return str(ex)
     return f"""
     <html>
         <head>

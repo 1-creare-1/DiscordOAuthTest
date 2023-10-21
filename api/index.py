@@ -62,3 +62,12 @@ def me():
             <img src='{user.avatar_url}' />
         </body>
     </html>"""
+
+@app.route("/roles/")
+@requires_authorization
+def me():
+    user = discord.fetch_user()
+    guild_id = 1158574703368220732
+    user_id = user.id
+    result = discord.requiest(f"/guilds/{guild_id}/members/{user_id}")
+    return result

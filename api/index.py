@@ -43,6 +43,9 @@ def callback():
 def redirect_unauthorized(e):
     return redirect(url_for("login"))
 
+@app.errorhandler(Exception)
+def oh_no_error(e):
+    return str(e)
 
 @app.route("/me/")
 @requires_authorization

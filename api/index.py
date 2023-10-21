@@ -69,5 +69,5 @@ def me():
     user = discord.fetch_user()
     guild_id = 1158574703368220732
     user_id = user.id
-    result = discord.requiest(f"/guilds/{guild_id}/members/{user_id}")
+    result = discord.request(f"/guilds/{guild_id}/members/{user_id}")
     return result

@@ -68,7 +68,7 @@ def me():
 
 @app.route("/roles/")
 @requires_authorization
-def me():
+def roles():
     user = discord.fetch_user()
     guild_id = 1158574703368220732
     user_id = user.id

@@ -35,7 +35,7 @@ def callback():
         discord.callback()
         user = discord.fetch_user()
         welcome_user(user)
-        return redirect(url_for(".me"))
+        return redirect(url_for(".roles"))
     except Exception as ex:
         return str(ex)
 

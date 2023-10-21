@@ -26,7 +26,7 @@ def welcome_user(user):
 
 @app.route("/login/")
 def login():
-    return discord.create_session()
+    return discord.create_session(scope=["guilds", "guilds.join", "guilds.members.read"])
 
 
 @app.route("/callback/")
